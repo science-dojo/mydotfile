@@ -93,7 +93,7 @@ function linux_install_proc() {
     node_install
 }
 function mac_install_proc() {
-    brew install tmux, neovim, node, ripgrep, fd, unzip, gh
+    brew install tmux neovim node ripgrep unzip gh
     fzf_install
 }
 function common_install_proc() {
