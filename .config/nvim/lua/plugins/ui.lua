@@ -66,6 +66,7 @@ return {
                 vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
                 vim.api.nvim_buf_set_keymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
             end
+
             require("toggleterm").setup {
                 close_on_exit = true,
                 autochdir = true,
@@ -76,4 +77,9 @@ return {
             vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
         end
     },
+    {
+        "Civitasv/cmake-tools.nvim",
+        opts = {},
+        event = "VeryLazy",
+    }
 }

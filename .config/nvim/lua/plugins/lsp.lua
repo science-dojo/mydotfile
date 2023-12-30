@@ -33,9 +33,10 @@ return {
             taplo = {},
             ruff_lsp = {},
             clangd = {
-                cmd = { "clangd", "--background-index", "--background-index-priority=normal", "--clang-tidy", "-j=8"},
+                cmd = { "clangd", "--background-index", "--background-index-priority=normal", "--clang-tidy", "-j=8" },
             },
             rust_analyzer = {},
+            neocmake = {},
             --ccls = {},
         }
         local on_attach = function(_, bufnr)
