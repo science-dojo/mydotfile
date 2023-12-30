@@ -9,7 +9,7 @@ return {
   {
     "j-hui/fidget.nvim",
     event = "VeryLazy",
-    tag = "v1.0.0",
+    tag = "v1.1.0",
   },
   {
     "neovim/nvim-lspconfig",
