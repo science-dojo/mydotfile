@@ -15,8 +15,8 @@ return {
     "neovim/nvim-lspconfig",
     cmd = { "Mason", "Neoconf" },
     event = { "BufReadPost", "BufNewFile" },
-    config = function()
-      local servers = {
+    opts = {
+      servers = {
         lua_ls = {
           settings = {
             Lua = {
@@ -38,16 +38,8 @@ return {
         },
         rust_analyzer = {},
         neocmake = {},
-      }
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      require("mason-lspconfig").setup({
-        ensure_installed = vim.tbl_keys(servers),
-      })
-      for server, config in pairs(servers) do
-        require("lspconfig")[server].setup(vim.tbl_deep_extend("keep", {
-          capabilities = capabilities,
-        }, config))
-      end
-    end,
+      },
+      setup = {},
+    },
   },
 }
