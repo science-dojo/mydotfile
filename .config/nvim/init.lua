@@ -1,4 +1,2 @@
-vim.loader.enable()
-require("essentials")
-require("lazy_nvim")
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
