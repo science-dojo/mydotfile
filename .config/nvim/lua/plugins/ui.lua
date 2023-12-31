@@ -52,4 +52,24 @@ return {
       timeout = 5000,
     },
   },
+  -- logo
+  -- use https://patorjk.com/software/taag to generate your own art ge
+  {
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    opts = function(_, opts)
+      local logo = [[
+              __       ___      ___   __    _____  ___    _______   _______   
+            /""\     |"  \    /"  | |" \  (\"   \|"  \  /"     "| /"      \  
+            /    \     \   \  //   | ||  | |.\\   \    |(: ______)|:        | 
+          /' /\  \    /\\  \/.    | |:  | |: \.   \\  | \/    |  |_____/   ) 
+          //  __'  \  |: \.        | |.  | |.  \    \. | // ___)_  //      /  
+        /   /  \\  \ |.  \    /:  | /\  |\|    \    \ |(:      "||:  __   \  
+        (___/    \___)|___|\__/|___|(__\_|_)\___|\____\) \_______)|__|  \___) 
+                                                                            
+      ]]
+      logo = string.rep("\n", 8) .. logo .. "\n\n"
+      opts.config.header = vim.split(logo, "\n")
+    end,
+  },
 }
