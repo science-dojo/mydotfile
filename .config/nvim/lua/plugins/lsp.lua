@@ -38,6 +38,8 @@ return {
         },
         rust_analyzer = {},
         neocmake = {},
+        gopls = {},
+        zls = {},
       },
       setup = {},
     },
