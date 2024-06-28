@@ -7,4 +7,5 @@ return {
       return true
     end,
   },
+  { "nvim-neotest/nvim-nio", event = { "BufReadPost", "BufNewFile" } },
 }

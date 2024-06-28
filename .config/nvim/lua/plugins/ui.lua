@@ -72,4 +72,24 @@ return {
       opts.config.header = vim.split(logo, "\n")
     end,
   },
+  {
+    "goolord/alpha-nvim",
+    event = "VimEnter",
+    enabled = true,
+    init = false,
+    opts = function()
+      local dashboard = require("alpha.themes.dashboard")
+      local logo = [[
+              __       ___      ___   __    _____  ___    _______   _______   
+            /""\     |"  \    /"  | |" \  (\"   \|"  \  /"     "| /"      \  
+            /    \     \   \  //   | ||  | |.\\   \    |(: ______)|:        | 
+          /' /\  \    /\\  \/.    | |:  | |: \.   \\  | \/    |  |_____/   ) 
+          //  __'  \  |: \.        | |.  | |.  \    \. | // ___)_  //      /  
+        /   /  \\  \ |.  \    /:  | /\  |\|    \    \ |(:      "||:  __   \  
+        (___/    \___)|___|\__/|___|(__\_|_)\___|\____\) \_______)|__|  \___) 
+                                                                            
+      ]]
+      dashboard.section.header.val = vim.split(logo, "\n")
+    end,
+  },
 }
