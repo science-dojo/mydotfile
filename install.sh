@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 dotfilesPath=$(
 	cd "$(dirname "$0")"
@@ -8,7 +8,7 @@ dotfilesPath=$(
 linkProcess() {
 	ignoreFilePath=$dotfilesPath/.linkignore
 	ignoreFile=[]
-	ignoreFile=($(cat "$ignoreFilePath"))
+	ignoreFile={$(cat "$ignoreFilePath")}
 	for filePath in $(find $dotfilesPath -maxdepth 1 -name '.*'); do
 		file=$(basename $filePath)
 		if [[ $file == '.linkignore' || $file == '.dotfiles' || $filePath == $(pwd) ]]; then
@@ -76,9 +76,9 @@ function java_jdtls() {
 }
 
 function pythonlib_install() {
-	pip3 install absl-py pathlib2
+	pip3 install  absl-py pathlib2
 	# tldr
-	pip3 install tldr
+	pip3 install  tldr
 }
 
 function lazygit_install() {
@@ -100,11 +100,20 @@ function mac_install_proc() {
 function common_install_proc() {
 	pythonlib_install
 }
+function ubuntu_install_proc() {
+	sudo apt install tmux neovim ripgrep unzip zip gh
+	fzf_install
+	tmux_install
+	node_install
+	lazygit_install
+	sudo apt install python3 python3-pip
+}
 main() {
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
 
-	mac_install_proc
+	#mac_install_proc
+	ubuntu_install_proc
 	common_install_proc
 
 }
