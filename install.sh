@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 dotfilesPath=$(
 	cd "$(dirname "$0")"
@@ -11,6 +11,7 @@ linkProcess() {
 	ignoreFile={$(cat "$ignoreFilePath")}
 	for filePath in $(find $dotfilesPath -maxdepth 1 -name '.*'); do
 		file=$(basename $filePath)
+    echo "processing file: ${file}" 
 		if [[ $file == '.linkignore' || $file=='.git' || $file == '.dotfiles' || $filePath == $(pwd) ]]; then
 			continue
 		fi
