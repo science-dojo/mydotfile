@@ -11,7 +11,7 @@ linkProcess() {
 	ignoreFile={$(cat "$ignoreFilePath")}
 	for filePath in $(find $dotfilesPath -maxdepth 1 -name '.*'); do
 		file=$(basename $filePath)
-		if [[ $file == '.linkignore' || $file == '.dotfiles' || $filePath == $(pwd) ]]; then
+		if [[ $file == '.linkignore' || $file=='.git' || $file == '.dotfiles' || $filePath == $(pwd) ]]; then
 			continue
 		fi
 
@@ -112,8 +112,8 @@ main() {
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
 
-	#mac_install_proc
-	ubuntu_install_proc
+	mac_install_proc
+	#ubuntu_install_proc
 	common_install_proc
 
 }
