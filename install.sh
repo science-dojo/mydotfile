@@ -12,7 +12,7 @@ linkProcess() {
 	for filePath in $(find $dotfilesPath -maxdepth 1 -name '.*'); do
 		file=$(basename $filePath)
     echo "processing file: ${file}" 
-		if [[ $file == '.linkignore' || $file=='.git' || $file == '.dotfiles' || $filePath == $(pwd) ]]; then
+		if [[ $file == '.linkignore' || $file == '.git' || $file == '.dotfiles' || $filePath == $(pwd) ]]; then
 			continue
 		fi
 
