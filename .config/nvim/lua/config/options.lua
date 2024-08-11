@@ -3,3 +3,5 @@
 -- Add any additional options here
 option = vim.opt
 option.hlsearch = false
+
+vim.g.autoformat = false
