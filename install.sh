@@ -95,15 +95,22 @@ function linux_install_proc() {
 	node_install
 }
 function mac_install_proc() {
-	brew install tmux node ripgrep unzip gh lazygit luarocks
-	fzf_install
+	#brew install tmux node ripgrep unzip gh lazygit luarocks
+	#fzf_install
 
   # brew install nvim
   # nvim install
-  curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
-  tar xzf nvim-macos-x86_64.tar.gz
-  mv nvim-macos-x86_64 ~/.local/
-  echo "export PATH=~/.local/nvim-macos-x86_64/bin:\$PATH" >> ~/.zshrc
+  #
+  # x86
+  # curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
+  # tar xzf nvim-macos-x86_64.tar.gz
+  #
+  # arm 
+  curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-arm64.tar.gz
+  tar xzf nvim-macos-arm64.tar.gz
+  mv nvim-macos-arm64 nvim_bin
+  mv nvim_bin ~/.local/bin/
+  echo "export PATH=~/.local/bin/nvim_bin/bin:\$PATH" >> ~/.zshrc
   source ~/.zshrc
 }
 function common_install_proc() {
@@ -123,7 +130,7 @@ main() {
 
 	mac_install_proc
 	#ubuntu_install_proc
-	common_install_proc
+	#common_install_proc
 
 }
 main
