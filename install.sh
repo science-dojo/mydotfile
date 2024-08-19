@@ -103,7 +103,7 @@ function mac_install_proc() {
   curl -LO https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-x86_64.tar.gz
   tar xzf nvim-macos-x86_64.tar.gz
   mv nvim-macos-x86_64 ~/.local/
-  echo "export ~/.local/nvim-macos-x86_64/bin:$PATH" >> ~/.zshrc
+  echo "export PATH=~/.local/nvim-macos-x86_64/bin:\$PATH" >> ~/.zshrc
   source ~/.zshrc
 }
 function common_install_proc() {
