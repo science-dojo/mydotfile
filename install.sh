@@ -124,6 +124,13 @@ function ubuntu_install_proc() {
 	lazygit_install
 	sudo apt install python3 python3-pip
 }
+
+function set_proxy() {
+ # go proxy
+ echo "export GO111MODULE=on" >> ~/.zshrc
+ echo "export GOPROXY=https://mirrors.aliyun.com/goproxy/" >> ~/.zshrc
+}
+
 main() {
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
@@ -131,6 +138,7 @@ main() {
 	mac_install_proc
 	#ubuntu_install_proc
 	#common_install_proc
+	set_proxy
 
 }
 main
