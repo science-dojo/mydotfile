@@ -7,6 +7,7 @@ return {
     end,
   },
   {
+    -- Extensible UI for Neovim notifications and LSP progress messages.
     "j-hui/fidget.nvim",
     event = "VeryLazy",
     tag = "v1.1.0",

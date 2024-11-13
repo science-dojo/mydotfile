@@ -1,6 +1,6 @@
 return {
   {
-
+    -- A simple statusline/winbar component that uses LSP to show your current code context
     "SmiteshP/nvim-navic",
     event = "VeryLazy",
     dependencies = {
@@ -21,6 +21,7 @@ return {
     end,
   },
   {
+    -- Neovim plugin for automatically highlighting other uses of the word under the cursor using either LSP, Tree-sitter, or regex matching
     "RRethy/vim-illuminate",
     event = { "BufReadPost", "BufNewFile" },
     config = function()
@@ -90,24 +91,24 @@ return {
   -- },
   -- logo
   -- use https://patorjk.com/software/taag to generate your own art ge
-  {
-    "nvimdev/dashboard-nvim",
-    event = "VimEnter",
-    opts = function(_, opts)
-      local logo = [[
-              __       ___      ___   __    _____  ___    _______   _______   
-            /""\     |"  \    /"  | |" \  (\"   \|"  \  /"     "| /"      \  
-            /    \     \   \  //   | ||  | |.\\   \    |(: ______)|:        | 
-          /' /\  \    /\\  \/.    | |:  | |: \.   \\  | \/    |  |_____/   ) 
-          //  __'  \  |: \.        | |.  | |.  \    \. | // ___)_  //      /  
-        /   /  \\  \ |.  \    /:  | /\  |\|    \    \ |(:      "||:  __   \  
-        (___/    \___)|___|\__/|___|(__\_|_)\___|\____\) \_______)|__|  \___) 
-                                                                            
-      ]]
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
-    end,
-  },
+  -- {
+  --   "nvimdev/dashboard-nvim",
+  --   event = "VimEnter",
+  --   opts = function(_, opts)
+  --     local logo = [[
+  --             __       ___      ___   __    _____  ___    _______   _______   
+  --           /""\     |"  \    /"  | |" \  (\"   \|"  \  /"     "| /"      \  
+  --           /    \     \   \  //   | ||  | |.\\   \    |(: ______)|:        | 
+  --         /' /\  \    /\\  \/.    | |:  | |: \.   \\  | \/    |  |_____/   ) 
+  --         //  __'  \  |: \.        | |.  | |.  \    \. | // ___)_  //      /  
+  --       /   /  \\  \ |.  \    /:  | /\  |\|    \    \ |(:      "||:  __   \  
+  --       (___/    \___)|___|\__/|___|(__\_|_)\___|\____\) \_______)|__|  \___) 
+  --
+  --     ]]
+  --     logo = string.rep("\n", 8) .. logo .. "\n\n"
+  --     opts.config.header = vim.split(logo, "\n")
+  --   end,
+  -- },
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
