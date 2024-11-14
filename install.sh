@@ -135,10 +135,10 @@ main() {
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
 
-	mac_install_proc
+	#mac_install_proc
 	#ubuntu_install_proc
 	#common_install_proc
-	set_proxy
+	#set_proxy
 
 }
 main

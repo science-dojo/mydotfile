@@ -1,12 +1,13 @@
 return {
-  -- {
-  --   "nvimdev/lspsaga.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("lspsaga").setup({})
-  --   end,
-  -- },
   {
+    "nvimdev/lspsaga.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("lspsaga").setup({})
+    end,
+  },
+  {
+    -- Extensible UI for Neovim notifications and LSP progress messages.
     "j-hui/fidget.nvim",
     event = "VeryLazy",
     tag = "v1.1.0",
@@ -25,9 +26,21 @@ return {
             },
           },
         },
+        pyright = {},
+        jsonls = {},
+        marksman = {},
+        dockerls = {},
+        docker_compose_language_service = {},
+        bashls = {},
+        taplo = {},
+        ruff_lsp = {},
         clangd = {
           cmd = { "clangd", "--background-index", "--background-index-priority=normal", "--clang-tidy", "-j=8" },
-        }
+        },
+        rust_analyzer = {},
+        neocmake = {},
+        gopls = {},
+        zls = {},
       },
       setup = {},
     },

@@ -1,23 +1,71 @@
 return {
+  -- {
+  --   "nvim-lualine/lualine.nvim",
+  --
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("lualine").setup({
+  --       options = {
+  --         theme = "tokyonight",
+  --       },
+  --     })
+  --   end,
+  -- },
+  -- {
+  --
+  --   "SmiteshP/nvim-navic",
+  --   event = "VeryLazy",
+  --   dependencies = {
+  --     "neovim/nvim-lspconfig",
+  --   },
+  -- },
+  -- {
+  --   "nvim-tree/nvim-web-devicons",
+  --   event = "VeryLazy",
+  --   config = true,
+  -- },
+  -- {
+  --   "utilyre/barbecue.nvim",
+  --   event = "VeryLazy",
+  --   config = function()
+  --     require("barbecue").setup({
+  --       theme = "tokyonight",
+  --     })
+  --   end,
+  -- },
+  -- -- https://github.com/sindrets/diffview.nvim/blob/main/USAGE.md
+  -- {
+  --   "sindrets/diffview.nvim",
+  --   cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+  --   config = function()
+  --     require("diffview").setup()
+  --   end,
+  -- },
+  -- {
+  --   "RRethy/vim-illuminate",
+  --   event = { "BufReadPost", "BufNewFile" },
+  --   config = function()
+  --     require("illuminate").configure()
+  --   end,
+  -- },
+  -- logo
+  -- use https://patorjk.com/software/taag to generate your own art ge
   {
-    -- A blazing fast and easy to configure Neovim statusline written in Lua.
-    "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("lualine").setup({
-        options = {
-          theme = "tokyonight",
-        },
-      })
-    end,
-  },
-  {
-    "utilyre/barbecue.nvim",
-    event = "VeryLazy",
-    config = function()
-      require("barbecue").setup({
-        theme = "tokyonight",
-      })
+    "nvimdev/dashboard-nvim",
+    event = "VimEnter",
+    opts = function(_, opts)
+      local logo = [[
+              __       ___      ___   __    _____  ___    _______   _______   
+            /""\     |"  \    /"  | |" \  (\"   \|"  \  /"     "| /"      \  
+            /    \     \   \  //   | ||  | |.\\   \    |(: ______)|:        | 
+          /' /\  \    /\\  \/.    | |:  | |: \.   \\  | \/    |  |_____/   ) 
+          //  __'  \  |: \.        | |.  | |.  \    \. | // ___)_  //      /  
+        /   /  \\  \ |.  \    /:  | /\  |\|    \    \ |(:      "||:  __   \  
+        (___/    \___)|___|\__/|___|(__\_|_)\___|\____\) \_______)|__|  \___) 
+                                                                            
+      ]]
+      logo = string.rep("\n", 8) .. logo .. "\n\n"
+      opts.config.header = vim.split(logo, "\n")
     end,
   },
 }
