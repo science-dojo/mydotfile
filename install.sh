@@ -99,6 +99,9 @@ function mac_install_proc() {
 	#fzf_install
 
   brew install nvim
+  # tiling manager window
+  brew install koekeishiya/formulae/yabai
+  brew install koekeishiya/formulae/skhd
   # nvim install
   #
   # x86
