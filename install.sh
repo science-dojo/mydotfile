@@ -102,6 +102,7 @@ function mac_install_proc() {
   # tiling manager window
   brew install koekeishiya/formulae/yabai
   brew install koekeishiya/formulae/skhd
+  #brew install --cask nikitabobko/tap/aerospace
   # nvim install
   #
   # x86
