@@ -95,7 +95,7 @@ function linux_install_proc() {
 	node_install
 }
 function mac_install_proc() {
-	brew install tmux node ripgrep unzip gh lazygit luarocks
+	brew install tmux node ripgrep unzip gh lazygit luarocks ruby curl wget openjdk
 	#fzf_install
 
   brew install nvim
@@ -146,7 +146,11 @@ function set_proxy() {
 
 main() {
   # install zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  if [ ! -d "${HOME}/.oh-my-zsh" ]; then 
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  else
+    echo "oh-my-zsh exist!"
+  fi
 
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
