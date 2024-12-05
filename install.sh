@@ -95,7 +95,7 @@ function linux_install_proc() {
 	node_install
 }
 function mac_install_proc() {
-	brew install tmux node ripgrep unzip gh lazygit luarocks ruby curl wget openjdk
+	brew install tmux node ripgrep unzip gh lazygit luarocks ruby curl wget openjdk 
 	#fzf_install
 
   brew install nvim
@@ -103,8 +103,7 @@ function mac_install_proc() {
   brew install koekeishiya/formulae/yabai
   brew install koekeishiya/formulae/skhd
 
-  # install antigen (zsh plugin manager)
-  brew install antigen
+  brew install autojump
 
   #brew install --cask nikitabobko/tap/aerospace
   # nvim install
