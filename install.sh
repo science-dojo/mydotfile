@@ -102,6 +102,10 @@ function mac_install_proc() {
   # tiling manager window
   brew install koekeishiya/formulae/yabai
   brew install koekeishiya/formulae/skhd
+
+  # install antigen (zsh plugin manager)
+  brew install antigen
+
   #brew install --cask nikitabobko/tap/aerospace
   # nvim install
   #
