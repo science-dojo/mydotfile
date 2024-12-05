@@ -118,7 +118,7 @@ function mac_install_proc() {
   #source ~/.zshrc
 
   # install oh my zsh plugins
-  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  #git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   # config zhs
   # plugins=( [plugins...] zsh-syntax-highlighting)
 }
