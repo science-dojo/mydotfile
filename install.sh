@@ -116,6 +116,11 @@ function mac_install_proc() {
   # mv nvim_bin ~/.local/bin/
   #echo "export PATH=~/.local/bin/nvim_bin/bin:\$PATH" >> ~/.zshrc
   #source ~/.zshrc
+
+  # install oh my zsh plugins
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+  # config zhs
+  # plugins=( [plugins...] zsh-syntax-highlighting)
 }
 function common_install_proc() {
 	pythonlib_install
@@ -136,6 +141,9 @@ function set_proxy() {
 }
 
 main() {
+  # install zsh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
 
