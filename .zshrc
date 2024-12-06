@@ -114,7 +114,7 @@ export LANG=en_US.UTF-8
 
 # zim plugin manager: github link:https://github.com/zimfw/zimfw?tab=readme-ov-file#set-up-zshrc
 export ZIM_CONFIG_FILE=~/.config/zsh/zimrc
-ZIM_HOME=~/.zim
+export ZIM_HOME=~/.zim
 # Download zimfw plugin manager if missing.
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
   curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
