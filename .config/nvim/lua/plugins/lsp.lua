@@ -22,6 +22,7 @@ return {
           cmd = { "clangd", "--background-index", "--background-index-priority=normal", "--clang-tidy", "-j=8" },
         },
         rust_analyzer = {},
+        bacon_ls = {},
         neocmake = {},
         pyright = {},
         jsonls = {},
