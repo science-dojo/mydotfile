@@ -1,11 +1,4 @@
 return {
-  -- {
-  --   "nvimdev/lspsaga.nvim",
-  --   event = "VeryLazy",
-  --   config = function()
-  --     require("lspsaga").setup({})
-  --   end,
-  -- },
   {
     "j-hui/fidget.nvim",
     event = "VeryLazy",
@@ -27,9 +20,19 @@ return {
         },
         clangd = {
           cmd = { "clangd", "--background-index", "--background-index-priority=normal", "--clang-tidy", "-j=8" },
-        }
+        },
+        rust_analyzer = {},
+        neocmake = {},
+        pyright = {},
+        jsonls = {},
+        marksman = {},
+        bashls = {},
+        taplo = {},
+        ruff_lsp = {},
+        dockerls = {},
+        docker_compose_language_service = {},
+        zls = {},
       },
-      setup = {},
     },
   },
 }

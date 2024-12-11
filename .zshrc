@@ -111,7 +111,6 @@ export LANG=en_US.UTF-8
 # source /opt/homebrew/share/antigen/antigen.zsh
 # antigen theme romkatv/powerlevel10k
 # antigen apply
-
 # zim plugin manager: github link:https://github.com/zimfw/zimfw?tab=readme-ov-file#set-up-zshrc
 export ZIM_CONFIG_FILE=~/.config/zsh/zimrc
 export ZIM_HOME=~/.zim
@@ -127,6 +126,8 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
+# source cargo
+. "$HOME/.cargo/env"
 
 export PATH='/opt/homebrew/bin/':$PATH
 export PATH=/Users/bytedance/.local/bin:$PATH
