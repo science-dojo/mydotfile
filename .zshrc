@@ -148,7 +148,9 @@ alias git='LANG=en_GB git'
 
 # iterm2 shell integeration
 # must be at the end of .zshrc
-curl -L https://iterm2.com/shell_integration/bash -o ~/.iterm2_shell_integration.bash
+if [ ! -e "${HOME}/.iterm2_shell_integration.zsh" ];then
+  curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
+fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
