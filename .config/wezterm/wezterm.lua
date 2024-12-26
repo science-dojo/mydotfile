@@ -5,4 +5,6 @@ local config = wezterm.config_builder()
 config.color_scheme = 'tokyonight_moon'
 -- tab
 config.hide_tab_bar_if_only_one_tab = true
+-- window
+config.window_decorations = "RESIZE"
 return config
