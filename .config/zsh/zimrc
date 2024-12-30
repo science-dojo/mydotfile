@@ -3,5 +3,5 @@ zmodule duration-info
 zmodule asciiship
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
-zmodule romkatv/powerlevel10k
 zmodule agkozak/zsh-z
+#zmodule romkatv/powerlevel10k
