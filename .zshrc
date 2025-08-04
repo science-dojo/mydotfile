@@ -129,6 +129,9 @@ source ${ZIM_HOME}/init.zsh
 # source cargo
 . "$HOME/.cargo/env"
 
+# source my pyvenv 
+source ~/.py3venv/bin/activate
+
 export PATH='/opt/homebrew/bin/':$PATH
 export PATH=/Users/bytedance/.local/bin:$PATH
 export PATH="/opt/homebrew/opt/ruby/bin":$PATH
