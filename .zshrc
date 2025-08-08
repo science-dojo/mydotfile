@@ -132,8 +132,8 @@ source ${ZIM_HOME}/init.zsh
 # source my pyvenv 
 source ~/.py3venv/bin/activate
 
-export PATH='/opt/homebrew/bin/':$PATH
-export PATH=/Users/bytedance/.local/bin:$PATH
+export PATH="/opt/homebrew/bin/":$PATH
+export PATH="$HOME/.local/bin":$PATH
 export PATH="/opt/homebrew/opt/ruby/bin":$PATH
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 # golang
@@ -142,6 +142,8 @@ export GOPROXY=https://mirrors.aliyun.com/goproxy/
 # java lang: must config JAVA_HOME
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk/23.0.1
 export PATH=$JAVA_HOME/bin:$PATH
+# zig path
+export PATH="$HOME/.local/bin/zig-0.15.0-dev":$PATH
 
 # util
 alias git='LANG=en_GB git'
