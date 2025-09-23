@@ -38,12 +38,12 @@ return {
     config = true,
   },
   {
-    "echasnovski/mini.ai",
+    "nvim-mini/mini.ai",
     event = "VeryLazy",
     config = true,
   },
   {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
     event = "VeryLazy",
     config = true,
   },
