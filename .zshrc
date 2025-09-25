@@ -1,21 +1,16 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  #source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-#fi
+zmodload zsh/zprof
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-#export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,9 +72,9 @@
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-#plugins=(git)
+plugins=(git)
 
-#source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -130,9 +125,10 @@ source ${ZIM_HOME}/init.zsh
 . "$HOME/.cargo/env"
 
 # source my pyvenv 
-source ~/.py3venv/bin/activate
+#source ~/.py3venv/bin/activate
 
-export PATH="/opt/homebrew/bin/":$PATH
+#export PATH="/opt/homebrew/bin/":$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH="$HOME/.local/bin":$PATH
 export PATH="/opt/homebrew/opt/ruby/bin":$PATH
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
@@ -143,7 +139,7 @@ export GOPROXY=https://mirrors.aliyun.com/goproxy/
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk/23.0.1
 export PATH=$JAVA_HOME/bin:$PATH
 # zig path
-export PATH="$HOME/.local/bin/zig-0.15.0-dev":$PATH
+#export PATH="$HOME/.local/bin/zig-0.15.0-dev":$PATH
 
 # util
 alias git='LANG=en_GB git'
@@ -151,19 +147,13 @@ alias git='LANG=en_GB git'
 # autojump
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && source $(brew --prefix)/etc/profile.d/autojump.sh
 
+eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+eval "$(~/.local/bin/mise activate zsh)"
+
 # iterm2 shell integeration
 # must be at the end of .zshrc
 if [ ! -e "${HOME}/.iterm2_shell_integration.zsh" ];then
   curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
 fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-#POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-
-eval "$(direnv hook zsh)"
-export PATH=/Users/bytedance/.local/bin:$PATH
-
-eval "$(starship init zsh)"
-
