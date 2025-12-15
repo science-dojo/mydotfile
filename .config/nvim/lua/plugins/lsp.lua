@@ -19,7 +19,14 @@ return {
           },
         },
         clangd = {
-          cmd = { "clangd", "--background-index", "--background-index-priority=normal", "--clang-tidy", "-j=8" },
+          cmd = {
+            "clangd",
+            "--background-index",
+            "--background-index-priority=normal",
+            "--clang-tidy",
+            "--experimental-modules-support",
+            "-j=8",
+          },
         },
         -- rust_analyzer = {},
         -- bacon_ls = {},
