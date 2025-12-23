@@ -125,7 +125,7 @@ source ${ZIM_HOME}/init.zsh
 . "$HOME/.cargo/env"
 
 # source my pyvenv 
-#source ~/.py3venv/bin/activate
+source ~/.py3venv/bin/activate
 
 #export PATH="/opt/homebrew/bin/":$PATH
 export PATH=$HOME/.local/bin:$PATH
@@ -138,18 +138,19 @@ export GOPROXY=https://mirrors.aliyun.com/goproxy/
 # java lang: must config JAVA_HOME
 export JAVA_HOME=/opt/homebrew/Cellar/openjdk/23.0.1
 export PATH=$JAVA_HOME/bin:$PATH
-# zig path
-#export PATH="$HOME/.local/bin/zig-0.15.0-dev":$PATH
 
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+export CMAKE_PREFIX_PATH="/opt/homebrew/opt/llvm"
 # util
 alias git='LANG=en_GB git'
 
 # autojump
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && source $(brew --prefix)/etc/profile.d/autojump.sh
 
-eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
-eval "$(~/.local/bin/mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
 
 # iterm2 shell integeration
 # must be at the end of .zshrc
@@ -157,3 +158,9 @@ if [ ! -e "${HOME}/.iterm2_shell_integration.zsh" ];then
   curl -L https://iterm2.com/shell_integration/zsh -o ~/.iterm2_shell_integration.zsh
 fi
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH=/Users/bytedance/.local/bin:$PATH
+
+# for tmux work good
+TERM=xterm-256color
+
+eval "$(starship init zsh)"
