@@ -1,0 +1,9 @@
+theme = TokyoNight Moon
+
+macos-window-buttons=hidden
+macos-titlebar-style=tabs
+macos-non-native-fullscreen=true
+
+
+keybind = cmd+i=prompt_surface_title
+
