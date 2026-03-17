@@ -19,12 +19,12 @@ return {
     },
   },
   -- { "catppuccin/nvim", name = "catppuccin", priority = 1000, lazy = false, opts = { flavour = "mocha" } },
-  -- {
-  --   "LazyVim/LazyVim",
-  --   opts = {
-  --     colorscheme = "catppuccin",
-  --   },
-  -- },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin",
+    },
+  },
 
   -- {
   --   "nvim-lualine/lualine.nvim",
