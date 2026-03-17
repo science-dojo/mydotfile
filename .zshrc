@@ -145,7 +145,7 @@ export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 export CMAKE_PREFIX_PATH="/opt/homebrew/opt/llvm"
 # util
 alias git='LANG=en_GB git'
-
+alias kk='kitty +kitten'
 # autojump
 [ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && source $(brew --prefix)/etc/profile.d/autojump.sh
 
@@ -162,5 +162,6 @@ export PATH=/Users/bytedance/.local/bin:$PATH
 
 # for tmux work good
 TERM=xterm-256color
+
 
 eval "$(starship init zsh)"

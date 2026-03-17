@@ -51,11 +51,36 @@ return {
     "Saghen/blink.cmp",
     opts = {
       keymap = {
-        ['<Tab>'] = {'select_next', 'fallback'},
-        ['<S-Tab>'] = {'select_prev', 'fallback'}
-      }
-    }
-  }
+        ["<Tab>"] = { "select_next", "fallback" },
+        ["<S-Tab>"] = { "select_prev", "fallback" },
+      },
+    },
+  },
+  {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+    dependencies = {
+      -- include a picker of your choice, see picker section for more details
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require("leetcode").setup({
+        skip_dashboard = true,
+        -- 其他配置...
+      })
+    end,
+
+    opts = {
+      -- configuration goes here
+      lang = "python3",
+      cn = { -- leetcode.cn
+        enabled = true,
+        translator = true, ---@type boolean
+        translate_problems = true, ---@type boolean
+      },
+    },
+  },
   -- 补全
   -- {
   --   "hrsh7th/nvim-cmp",

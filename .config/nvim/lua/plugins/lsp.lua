@@ -20,13 +20,13 @@ return {
         },
         clangd = {
           cmd = {
-            "/opt/homebrew/opt/llvm/bin/clangd",
+            "clangd",
             "--background-index",
             "--background-index-priority=normal",
             "--clang-tidy",
             "--experimental-modules-support",
             "-j=8",
-            "--query-driver=/opt/homebrew/opt/llvm/bin/clang*",
+            -- "--query-driver=/opt/homebrew/opt/llvm/bin/clang*",
             "--enable-config",
             "--compile-commands-dir=build",
           },
