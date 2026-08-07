@@ -67,18 +67,18 @@ return {
     config = function()
       require("leetcode").setup({
         skip_dashboard = true,
-        -- 其他配置...
       })
     end,
 
     opts = {
       -- configuration goes here
-      lang = "python3",
-      cn = { -- leetcode.cn
-        enabled = true,
-        translator = true, ---@type boolean
-        translate_problems = true, ---@type boolean
-      },
+      lang = "Python3",
+      -- image_support = true, -- 启用图片渲染
+      -- cn = { -- leetcode.cn
+      --   enabled = true,
+      --   translator = true, ---@type boolean
+      --   translate_problems = true, ---@type boolean
+      -- },
     },
   },
   -- 补全

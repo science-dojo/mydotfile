@@ -143,14 +143,7 @@ function set_proxy() {
  echo "export GOPROXY=https://mirrors.aliyun.com/goproxy/" >> ~/.zshrc
 }
 
-main() {
-  # install zsh
-  if [ ! -d "${HOME}/.oh-my-zsh" ]; then 
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  else
-    echo "oh-my-zsh exist!"
-  fi
-
+main() { 
 	# 构建用户目录软连接
 	linkProcess $dotfilesPath
 

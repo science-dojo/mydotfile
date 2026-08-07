@@ -1,0 +1,3 @@
+[character]
+success_symbol = "[>](bold green)"   # 成功时显示绿色的 ">"
+error_symbol = "[>](bold red)"      # 失败时显示红色的 ">"
