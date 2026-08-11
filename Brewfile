@@ -101,7 +101,6 @@ brew "ldns"
 brew "libfido2"
 # C interface for Google's OS library for Machine Intelligence
 brew "libtensorflow"
-# LLVM Project Linker
 brew "lld"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
@@ -133,8 +132,6 @@ brew "p7zip"
 brew "poppler"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # File browser
 brew "ranger"
 # Install various Ruby versions and implementations
