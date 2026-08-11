@@ -177,15 +177,11 @@ brew "zsh-syntax-highlighting"
 cask "aerospace"
 # Android SDK component
 cask "android-platform-tools"
-# Display management tool
-cask "betterdisplay"
 cask "font-hack-nerd-font"
 cask "font-monaspice-nerd-font"
 cask "font-noto-sans-symbols-2"
 cask "font-sketchybar-app-font"
 cask "font-symbols-only-nerd-font"
-# Desktop app for learning Git and GitHub
-cask "git-it"
 # Free and open-source media player
 cask "iina"
 # Remote development gateway by Jetbrains
@@ -194,8 +190,6 @@ cask "jetbrains-gateway"
 cask "kitty"
 # Open-source download manager
 cask "motrix"
-# Orchestrates virtual Ubuntu instances
-cask "multipass"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Environment for statistical computing and graphics
